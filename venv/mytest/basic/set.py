@@ -1,0 +1,11 @@
+s = set([3, 2, 1, 4, 5, 4, 2, 1]);
+print(s);
+s.add(6);
+s.add(5);
+print(s);
+s2 = set([4, 5, 6, 8]);
+print(s & s2);
+print(s | s2);
+sz = (2, );
+s2.add(sz);
+print(s2);
