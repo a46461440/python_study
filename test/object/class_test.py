@@ -1,7 +1,8 @@
 class Student(object):
     __static__ = []
 
-    __slots__ = ("country", "__name", "__age", "__sex", "__score", "do_homework", "set_age")
+    country = ""
+    # __slots__ = ("country", "__name", "__age", "__sex", "__score", "do_homework", "set_age")
 
     def __init__(self, name, age, sex, **score):
         self.__name = name

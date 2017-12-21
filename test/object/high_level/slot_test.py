@@ -1,3 +1,4 @@
+import functools
 from types import MethodType
 
 
@@ -22,7 +23,13 @@ def set_country(self, country):
     self.country = country
 
 
+def get_country(self) :
+    return self.country
+
+
 Student.set_country = set_country
+
+Student.get_country = get_country
 
 
 def set_age(self, age):
@@ -36,7 +43,7 @@ print(s.__age)
 s.print_info()
 
 s.set_country("China")
-# s1.set_country("Australia")
+s1.set_country("Australia")
 
-print(s.country)
-print(s1.country)
+print(s.get_country())
+print(s1.get_country())
