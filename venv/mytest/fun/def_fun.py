@@ -43,3 +43,36 @@ def change_param(name, *arr):
 
 
 change_param('ZXC', 1, 2, 3, 4, 5, 6, 7, 8, )
+
+other = {'city': "ChangeSha", 'job': "Engineer"};
+
+print("-----------------------------------")
+
+
+# 用**other来接受变长的dict 全部会被转换成dict
+def person(name, age, **other):
+    print(name, ":", age, ":other:", other);
+    print(other.items());
+
+
+person("ZXC", 23, **other);
+
+
+def person(name, age, *, city, job):
+    print(name, ":", age, ":", city, ":", job);
+
+
+person("ZXC", 22, city="ChangSha", job="Engineer");
+
+
+def person(name, age, *args, city, job):
+    print(name, ":", args, age, ":", city, ":", job);
+
+
+person("ZXC", 22, "OK", city="ChangSha", job="Enginner");
+
+print(other);
+
+other = ["ZXC", "ZXM", "XCG"];
+print(other[0:1]);
+print(other[1:][::2]);
